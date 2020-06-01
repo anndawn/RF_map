@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.r1 {
+  grid-area: r1;
+}
+.selection {
+  grid-area: dropdown;
+}
+.country {
+  grid-area: country;
+}
+.chart {
+  grid-area: map;
+  display: inline-block;
+  height:auto
+}
+.infobox {
+  grid-area: txtbox;
+  overflow-y: auto;
+  height: 550px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 350px 1fr 0.5fr 20px 0.8fr 1fr 30px;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas: 
+    "r1 dropdown dropdown dropdown dropdown dropdown ."
+    "map map map . txtbox txtbox ."
+    /* "footer footer footer footer"; */
+}
+.infobox p{font-size: 1vw;margin-block-start: 0.5vw;margin-block-end: 0.5vw;}
+.infobox p em{font-size: 1.5vw;margin-block-end: 1vw;} */
+.country {
+  stroke: white;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+</style>
+
+<body>
+  <div id="observablehq-e9cbe271" class='container'>
+    <div class="observablehq-viewof-r1 r1"></div>
+    <div class="observablehq-viewof-Selection selection"></div>
+    <div class="observablehq-chart chart"></div>
+    <div class="observablehq-infobox infobox"></div>
+    <!-- <div class="observablehq-viewof-country"></div> -->
+    <!-- <div class="observablehq-widhe"></div> -->
+  </div>
+  <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@anndawn/untitled/2.js?v=3";
+    (new Runtime).module(define, name => {
+      if (name === "viewof r1") return Inspector.into("#observablehq-e9cbe271 .observablehq-viewof-r1")();
+      if (name === "viewof Selection") return Inspector.into("#observablehq-e9cbe271 .observablehq-viewof-Selection")();
+      if (name === "chart") return Inspector.into("#observablehq-e9cbe271 .observablehq-chart")();
+      if (name === "infobox") return Inspector.into("#observablehq-e9cbe271 .observablehq-infobox")();
+      // if (name === "viewof country") return Inspector.into("#observablehq-e9cbe271 .observablehq-viewof-country")();
+      // if (name === "widhe") return Inspector.into("#observablehq-e9cbe271 .observablehq-widhe")();
+    });
+  </script>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  console.log(widhe);
+  
+</script>
