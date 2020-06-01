@@ -8,10 +8,14 @@
 <style>
 .r1 {
   grid-area: r1;
+  font-size: 1.5vw !important;
 }
+
 .selection {
   grid-area: dropdown;
+  font-size: 1.5vw !important;
 }
+
 .country {
   grid-area: country;
 }
@@ -28,10 +32,10 @@
 
 .container {
   display: grid;
-  grid-template-columns: 350px 1fr 0.5fr 20px 0.8fr 1fr 30px;
+  grid-template-columns: 350px 0.5fr 1fr 20px 0.8fr 1fr 30px;
   grid-template-rows: 100px 1fr;
   grid-template-areas: 
-    "r1 dropdown dropdown dropdown dropdown dropdown ."
+    "r1 r1 dropdown dropdown dropdown dropdown ."
     "map map map . txtbox txtbox ."
     /* "footer footer footer footer"; */
 }
@@ -44,6 +48,11 @@
   stroke-linecap: round;
   vector-effect: non-scaling-stroke;
 }
+
+.selection div form div div{font-size: 1.5vw !important;}
+.r1 div form div div{font-size: 1.5vw !important;}
+.legendOrdinal{font-size: 1.5vw !important;}
+.selection select{font-size: 1.5vw !important;}
 </style>
 
 <body>
